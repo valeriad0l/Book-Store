@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Shopping Cart</title>
+    <link rel="stylesheet" href="/stylesheets/cart.css">
+</head>
+<body>
+<h1>Your Shopping Cart</h1>
+
+<% if (cartItems.length > 0) { %>
+    <table>
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% cartItems.forEach(item => { %>
+            <tr>
+                <td><%= item.book %></td>
+                <td>$<%= item.price %></td>
+                <td>
+                    <form action="/cart/update" method="POST">
+                        <input type="hidden" name="book" value="<%= item.book %>">
+                        <input type="number" name="quantity" value="<%= item.quantity %>" min="1">
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+                <td>$<%= item.total %></td>
+                <td>
+                    <form action="/cart/update" method="POST">
+                        <input type="hidden" name="book" value="<%= item.book %>">
+                        <input type="hidden" name="quantity" value="0">
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        <% }); %>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">Total Price:</td>
+            <td colspan="2">$<%= totalPrice %></td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <div>
+        <a href="/">Continue Shopping</a> |
+        <a href="/cart/checkout">Checkout</a>
+    </div>
+
+<% } else { %>
+    <p>Your cart is empty.</p>
+    <a href="/">Continue Shopping</a>
+<% } %>
+</body>
+</html>

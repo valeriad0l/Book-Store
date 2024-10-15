@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Store</title>
+    <link rel="stylesheet" href="/stylesheets/bookstore.css">
+</head>
+<body>
+<h1>Welcome to SOEN387 Book Store</h1>
+<h2>Available Books</h2>
+
+<ul>
+    <% for (let book in books) { %>
+        <li>
+            <strong><%= book %></strong> - $<%= books[book] %>
+            <form action="/" method="POST">
+                <input type="hidden" name="book" value="<%= book %>">
+                Quantity: <input type="number" name="quantity" value="1" min="1">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </li>
+    <% } %>
+</ul>
+
+<a href="/cart">Items in Cart (<%= cartItems %>): <img src="/images/shoppingcart.png" alt="Cart Icon" class="cart-icon"></a>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.book-list {
+    width: 60%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.book-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.book-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.book-price {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.cart-icon {
+    float: right;
+    font-size: 1.2em;
+}
+
+.cart-icon img {
+    width: 24px;
+    vertical-align: middle;
+}
+
+.center-block {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.cart-icon {
+    width: 24px;
+}

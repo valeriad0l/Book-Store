@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    color: #666;
+}
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.book-item {
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.book-price {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.cart-icon {
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.cart-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cart-link a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.cart-link a:hover {
+    text-decoration: underline;
+}
