@@ -1,4 +1,4 @@
-# Book Store Project (Web-Based Enterprise Application Design A1) 📚
+# Web-Based Enterprise Application Design A1 📚
 
 ## Description
 The assignment requires implementing the same website using three different technologies: **Servlet**, **JSP**, and **Node.js**. The bookstore allows users to browse hardcoded books, add them to a shopping cart, update the quantity, and remove items from the cart. A checkout page confirms the cart’s contents and completes the order.
